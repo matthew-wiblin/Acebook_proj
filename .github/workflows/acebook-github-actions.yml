@@ -38,8 +38,11 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: run server
-      run: npm start
+    - name: Start server
+      run: npm start &
 
     - name: Run tests
       run: npm test
+
+    - name: Stop server
+      run: kill $(Isof -t -i:3030)
