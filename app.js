@@ -36,7 +36,7 @@ app.use(
   })
 );
 
-// clear the cookies after user logs out
+// clear the cookies after user logs out.
 app.use((req, res, next) => {
   if (req.cookies.user_sid && !req.session.user) {
     res.clearCookie("user_sid");
