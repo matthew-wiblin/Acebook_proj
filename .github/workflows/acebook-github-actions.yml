@@ -52,7 +52,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
-        aws s3 cp Acebook_proj.zip s3://matthew-acebook-s3-bucket/Acebook_proj.zip
+        aws s3 cp Acebook_proj.zip s3://matthew-acebook-s3-bucket/Acebook_proj.zip --debug
 
     - name: Deploy with CodeDeploy
       env:
