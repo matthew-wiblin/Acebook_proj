@@ -8,7 +8,9 @@
 # sudo systemctl status mongod
 
 sudo yum update -y
-sudo yum install -y gnupg
+sudo yum install -y gnupg curl git
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc
 sudo rpm --import https://www.mongodb.org/static/pgp/server-5.0.asc
 echo "[mongodb-org-5.0]
 name=MongoDB Repository
