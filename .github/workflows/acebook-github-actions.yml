@@ -61,7 +61,7 @@ jobs:
     - name: Deploy with CodeDeploy
       run: |
         aws deploy create-deployment \
-          --application-name matthew-acebook-application-fire-2 \
+          --application-name fire-acebook-application \
           --deployment-config-name CodeDeployDefault.OneAtATime \
-          --deployment-group-name matthew-acebook-fire-production-2 \
+          --deployment-group-name fire-acebook-deployment \
           --s3-location bucket=matthew-acebook-s3-bucket,key=Acebook_proj.zip,bundleType=zip
