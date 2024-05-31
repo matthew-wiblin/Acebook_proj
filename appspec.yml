@@ -1,18 +1,18 @@
 version: 0.0
-os: linux
+os: ubuntu
 files:
   - source: /
     destination: /var/www/fireapp
 
-hooks:
-  BeforeInstall:
-    - location: scripts/install_dependencies.sh
-      runas: root
+# hooks:
+#   BeforeInstall:
+#     - location: scripts/install_dependencies.sh
+#       runas: root
 
-  AfterInstall:
-    - location: scripts/after_install.sh
-      runas: root
+#   AfterInstall:
+#     - location: scripts/after_install.sh
+#       runas: root
 
-  ApplicationStart:
-    - location: scripts/application_start.sh
-      runas: root
+#   ApplicationStart:
+#     - location: scripts/application_start.sh
+#       runas: root
